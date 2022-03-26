@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="russian" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>@ememem13</title>
+
+  <style>
+    .text {
+      width: 400px;
+      float: left;
+      font-size: large;
+      color: black;
+    }
+    .container {
+      position: fixed;
+      right: 250px ;
+      width: 300px;
+      top: 100px;
+      padding: 32px;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px #ccc;
+      background-color: lavender;
+
+    }
+    .form_button {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      color: cornflowerblue;
+      background-color: snow;
+    }
+    .input-group {
+      color: cornflowerblue;
+      font-family: "Arial Black",serif;
+    }
+    body{
+      background-color: dimgray;
+    }
+
+  </style>
+
+</head>
+<link href="main.css" rel="stylesheet">
+<script>
+  function readMore() {
+    const dots = document.getElementById("dots");
+    const more = document.getElementById("more");
+    const btn = document.getElementById("btn");
+
+    if(dots.style.display === "none") {
+      dots.style.display="inline";
+      btn.innerHTML="Подробнее";
+      more.style.display="none";
+    } else{
+      dots.style.display="none";
+      btn.innerHTML="Скрыть";
+      more.style.display="inline";
+
+    }
+  }
+
+</script>
+<body>
+
+<div class="preform">
+  <h1>Привет! Это домашнее задание по Frontend за 3 лекцию.</h1>
+  <p class="text">Мы с вами уже успели изучить некоторые инструменты, как <i>HTML</i> и <i>CSS</i>.
+    Мне кажется, разметкой этого документа Вас не удивить, однако, это задание больше расчитано на понимание
+    CSS, чем HTML. Рассмотрите разметку этого документа и создайте окно входа и исправьте намеренно оставленные
+    ошибки в этом документе: <span id="dots">...</span>
+    <br><span id="more">
+    <br><b>1.</b>  Сделайте этот текст более читаемым - сожмите его в колонку и разместите её слева с таким расчётом,
+    чтобы всё остальное наполнение колонки не перекрывало колонку. Можете изменять размер текста, а в идеале - добавить полосу прокрутки.
+    <br><b>2.</b> Снизу вы видите форму входа, однако, что-то в ней не так. Почините её и убедитесь, что пароль не подсмотреть.
+    <br><b>3.</b> Сама форма должна находиться по центру оставшейся части страницы (то есть ширина страницы минус ширина колонки с этим текстом)
+    <br><b>4.</b> Форма должна быть обведена и за ней должна быть тень.
+    <br><b>5.</b> Установите документу фоновый цвет.
+    <br><b>6.</b> Украсьте саму форму на свой вкус. Это более дизайнерское задание - чем лучше получится, тем больше баллов;)
+    <br><b>7.</b> Задайте заголовку браузера имя своего Telegram-аккаунта. <b><u>Это очень важно, иначе баллы за задание Вам выставлены не будут!</u></b>
+    <br><br>
+    В выполнении этих заданий немного (возможно) должны помочь классы, расставленные по документу. В качестве селекторов вы можете
+    свободно использовать и обращение по ID. В качестве ответа на задание пришлите измененный документ. Максимальное количество баллов за задание - 50. Соответствие каждому критерию оценивается.</span>
+    <button id="btn"
+    onclick="readMore()">Подробнее</button>
+</div>
+
+<div class="container">
+  <form method="get" id="form">
+    <div class="input-group">
+      <label for="login">Login</label>
+      <label>
+        <input type="text" name="login" placeholder="Login">
+      </label>
+    </div>
+    <div class="input-group">
+      <label for="password">Password</label>
+      <label>
+        <input type="text" name="password" placeholder="Password">
+      </label>
+    </div>
+    <button type="submit" class="form_button">Войти</button>
+  </form>
+
+</div>
+
+</body>
+<script src="main.js"></script>
+</html>
